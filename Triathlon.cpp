@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+#define ll long long
+#define mp make_pair
+#define pb push_back
+#define fi first
+#define se second
+#define BOOST ios_base::sync_with_stdio(false);cin.tie(NULL);
+using namespace std;
+//int range 1e9
+//ll range 10e18
+//double > float
+
+const int limit = 1e6+5;
+const int bat = 1e6;
+const int int_range = 1e9;
+/*
+1 1 1 = 1 2   2 4
+              1 2
+              1 2
+1 1 1 = 1 2
+2 3 1 = 2 4
+sort des;
+
+*/
+bool cmp(pair<int, int> a, pair<int, int> b){
+  return a.second > b.second;
+}
+
+int main(){
+   BOOST
+   
+   int n; cin >> n;
+   vector<pair<int, int>> vec;
+   int sum = 0;
+   for(int i=0; i < n;i++){
+    int a, b, c;
+    cin >> a >> b >> c;
+    vec.pb(mp(a, (b+c)));
+
+    
+   }
+   sort(vec.begin(), vec.end(), cmp);
+   int res = 0;
+   //for(auto it:vec) cout << it.fi  << " " << it.se << endl;
+
+    for(int i=0; i < n; i++){
+      if(!i) res = vec[i].se;
+      else res = max(vec[i].se + vec[i].fi + sum, res);
+      sum+=vec[i].fi;
+    }
+   cout << res << endl;
+
+
+
+
+}

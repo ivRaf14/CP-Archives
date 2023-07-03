@@ -1,0 +1,11 @@
+[
+	{
+		"test": "6\nN 10\nE 2\nS 3\nW 4\nS 5\nE 8"
+	},
+	{
+		"test": "6\nN 10\nE 2\nS 3\nW 4\nS 5\nE 8"
+	},
+	{
+		"test": "6\nN 10\nE 2\nS 3\nW 4\n"
+	}
+]
